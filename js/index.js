@@ -98,14 +98,30 @@ $(function(){
 				$(".mask").fadeOut();
 				$(".infos").show().siblings().hide();
 			})
-			function setScroll(){///滚动条设置
-				$("#scroll").slimScroll({
-				height: "250px",
-				alwaysVisible: true,
-				});
-			}
-			setScroll();
-			
+//			function setScroll(){///滚动条设置
+//				$("#scroll").slimScroll({
+//				height: "250px",
+//				alwaysVisible: true,
+//				});
+//			}
+//			setScroll();
+			$("#scroll").panel({iWheelStep:32});
+			$(".threeSec .gift li img").hover(function(){
+				console.log($(this).parents("li").index());
+				var i = $(this).parents("li").index();
+//				$(this).parents("dt").siblings().find(".giftInfo").removeClass("hide").parents("li").siblings().find(".giftInfo").addClass("hide");
+				$(".threeSec .gift li").eq(i).find(".giftInfo").removeClass("hide").parent().parent().siblings().find(".giftInfo").addClass("hide");
+			},function(){
+				$(".threeSec .gift li").find(".giftInfo").addClass("hide");
+			});
+			$(".fiveSec .box li img").hover(function(){
+				console.log($(this).parents("li").index());
+				var i = $(this).parents("li").index();
+//				$(this).parents("dt").siblings().find(".giftInfo").removeClass("hide").parents("li").siblings().find(".giftInfo").addClass("hide");
+				$(".fiveSec .box li").eq(i).find(".giftInfo").removeClass("hide").parent().parent().siblings().find(".giftInfo").addClass("hide");
+			},function(){
+				$(".fiveSec .box li").find(".giftInfo").addClass("hide");
+			})
 		},
 		render:function(){
 			var that=this;

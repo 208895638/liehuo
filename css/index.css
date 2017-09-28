@@ -197,7 +197,8 @@ body, html {
       padding-top: 67px; }
       .threeSec .wrap .gift ul li {
         display: inline-block;
-        margin: 0 6px; }
+        margin: 0 6px;
+        position: relative; }
         .threeSec .wrap .gift ul li dl dt {
           position: relative;
           width: 276px;
@@ -241,6 +242,29 @@ body, html {
             background-size: cover; }
           .threeSec .wrap .gift ul li dl dd .gift_hide {
             display: none; }
+        .threeSec .wrap .gift ul li dl .giftInfo {
+          position: absolute;
+          width: 400px;
+          height: 136px;
+          background: url(../images/info_bg.png) no-repeat center;
+          background-size: cover;
+          padding-top: 82px;
+          z-index: 99;
+          top: 30px; }
+          .threeSec .wrap .gift ul li dl .giftInfo p {
+            width: 49%;
+            display: inline-block;
+            text-align: center;
+            font: 15px/37px "微软雅黑";
+            color: #ffea94; }
+        .threeSec .wrap .gift ul li dl .info9 {
+          left: 276px; }
+        .threeSec .wrap .gift ul li dl .info10 {
+          left: 276px; }
+        .threeSec .wrap .gift ul li dl .info11 {
+          left: -400px; }
+        .threeSec .wrap .gift ul li dl .info12 {
+          left: -400px; }
 
 .fourSec {
   width: 100%;
@@ -322,21 +346,27 @@ body, html {
             font: 18px/60px "微软雅黑";
             color: #f5d450;
             text-align: center; }
-          .fourSec .wrap .gift .con .top ul li {
-            text-align: center;
-            color: #fff;
-            font: 18px/30px "微软雅黑";
-            margin-bottom: 3px; }
-            .fourSec .wrap .gift .con .top ul li span {
-              width: 30px;
-              display: inline-block; }
-            .fourSec .wrap .gift .con .top ul li em {
-              width: 136px;
-              display: inline-block; }
-            .fourSec .wrap .gift .con .top ul li i {
-              margin-left: 30px; }
-          .fourSec .wrap .gift .con .top ul .money {
-            color: #f5d450; }
+          .fourSec .wrap .gift .con .top ul {
+            width: 312px;
+            margin: 0 auto; }
+            .fourSec .wrap .gift .con .top ul li {
+              text-align: center;
+              color: #fff;
+              font: 18px/30px "微软雅黑";
+              margin-bottom: 3px; }
+              .fourSec .wrap .gift .con .top ul li span, .fourSec .wrap .gift .con .top ul li em {
+                float: left; }
+              .fourSec .wrap .gift .con .top ul li span {
+                width: 10%; }
+              .fourSec .wrap .gift .con .top ul li em {
+                width: 60%;
+                text-align: center; }
+              .fourSec .wrap .gift .con .top ul li i {
+                width: 30%;
+                display: inline-block;
+                text-align: right; }
+            .fourSec .wrap .gift .con .top ul .money {
+              color: #f5d450; }
 
 .fiveSec {
   width: 100%;
@@ -401,44 +431,69 @@ body, html {
         .fiveSec .wrap .box ul li {
           display: inline-block;
           margin: 0 17px; }
-          .fiveSec .wrap .box ul li dl dt {
-            width: 164px;
-            height: 164px;
-            position: relative;
-            margin: 0 auto; }
-            .fiveSec .wrap .box ul li dl dt img {
-              width: 98px;
-              position: absolute;
-              left: 0;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              margin: auto; }
-          .fiveSec .wrap .box ul li dl dd {
-            margin-bottom: 46px; }
-            .fiveSec .wrap .box ul li dl dd a {
-              width: 250px;
-              height: 70px;
-              text-align: center;
-              font: 28px/70px "微软雅黑";
-              color: #4b3813;
-              display: block;
+          .fiveSec .wrap .box ul li dl {
+            position: relative; }
+            .fiveSec .wrap .box ul li dl dt {
+              width: 164px;
+              height: 164px;
+              position: relative;
               margin: 0 auto; }
-            .fiveSec .wrap .box ul li dl dd .lq {
-              background: url(../images/fif_bu1_03.png) no-repeat center;
-              background-size: cover; }
-            .fiveSec .wrap .box ul li dl dd .lq:hover {
-              background: url(../images/fif_bu_eff1_03.png) no-repeat center;
-              background-size: cover; }
-            .fiveSec .wrap .box ul li dl dd .ylq {
-              background: url(../images/thd_bu2_03_11.png) no-repeat center;
-              background-size: cover; }
-            .fiveSec .wrap .box ul li dl dd .boxHide {
-              display: none; }
-          .fiveSec .wrap .box ul li dl .text {
-            font: 28px/92px "微软雅黑";
-            color: #c2af8f;
-            text-align: center; }
+              .fiveSec .wrap .box ul li dl dt img {
+                width: 98px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto; }
+            .fiveSec .wrap .box ul li dl dd {
+              margin-bottom: 46px; }
+              .fiveSec .wrap .box ul li dl dd a {
+                width: 250px;
+                height: 70px;
+                text-align: center;
+                font: 28px/70px "微软雅黑";
+                color: #4b3813;
+                display: block;
+                margin: 0 auto; }
+              .fiveSec .wrap .box ul li dl dd .lq {
+                background: url(../images/fif_bu1_03.png) no-repeat center;
+                background-size: cover; }
+              .fiveSec .wrap .box ul li dl dd .lq:hover {
+                background: url(../images/fif_bu_eff1_03.png) no-repeat center;
+                background-size: cover; }
+              .fiveSec .wrap .box ul li dl dd .ylq {
+                background: url(../images/thd_bu2_03_11.png) no-repeat center;
+                background-size: cover; }
+              .fiveSec .wrap .box ul li dl dd .boxHide {
+                display: none; }
+            .fiveSec .wrap .box ul li dl .text {
+              font: 28px/92px "微软雅黑";
+              color: #c2af8f;
+              text-align: center; }
+            .fiveSec .wrap .box ul li dl .giftInfo {
+              position: absolute;
+              width: 400px;
+              height: 136px;
+              background: url(../images/info_bg.png) no-repeat center;
+              background-size: cover;
+              padding-top: 82px;
+              z-index: 99;
+              top: 30px; }
+              .fiveSec .wrap .box ul li dl .giftInfo p {
+                width: 49%;
+                display: inline-block;
+                text-align: center;
+                font: 15px/37px "微软雅黑";
+                color: #ffea94; }
+            .fiveSec .wrap .box ul li dl .info9 {
+              left: 174px; }
+            .fiveSec .wrap .box ul li dl .info10 {
+              left: 174px; }
+            .fiveSec .wrap .box ul li dl .info11 {
+              left: -325px; }
+            .fiveSec .wrap .box ul li dl .info12 {
+              left: -325px; }
 
 .sixSec {
   width: 100%;
@@ -748,15 +803,22 @@ body, html {
       width: 100%; }
       .mask .giftCode .isGiftCode .per {
         width: 252px;
-        height: 124px;
+        height: 104px;
         margin: 0 auto;
-        background: #4d231b; }
+        background: #4d231b;
+        position: relative;
+        padding-top: 20px; }
         .mask .giftCode .isGiftCode .per h3 {
-          font: 16px/86px "微软雅黑";
+          font: 16px/28px "微软雅黑";
           color: #d2cccb;
           text-align: center; }
         .mask .giftCode .isGiftCode .per h4 {
-          text-align: center; }
+          text-align: center;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 15px;
+          margin: auto; }
           .mask .giftCode .isGiftCode .per h4 a {
             display: inline-block;
             width: 94px;
@@ -798,3 +860,19 @@ body, html {
     display: block;
     height: 150px;
     z-index: 2; }
+
+.zUIpanelScrollBox, .zUIpanelScrollBar {
+  width: 10px;
+  top: 4px;
+  right: 2px;
+  border-radius: 5px; }
+
+.zUIpanelScrollBox {
+  background: black;
+  opacity: 0.1;
+  filter: alpha(opacity=10); }
+
+.zUIpanelScrollBar {
+  background: #000;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
